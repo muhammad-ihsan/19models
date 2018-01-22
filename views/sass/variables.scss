@@ -1,0 +1,92 @@
+/**
+ * List of Variabels
+ */
+
+$block-height             : 650px;
+ $brand-primary           : #03A9F5;
+ $brand-secondary         : #7fbae8;
+
+ $c-white               	: #fff;
+ $c-yellow              	: #D59317;
+ $c-yellow-light        	: #F5A623;
+ $c-blue                	: #157cc2;
+ $c-neo-blue				      : #173155;
+ $c-light-blue          	: #33beef;
+ $c-dark-blue           	: #173155;
+ $c-green               	: #07BC4C;
+ $c-red                 	: #D53517;
+ $c-neo-red             	: #D51717;
+ $c-grey                	: #E1E1E1;
+ $c-gray-darker         	: #9B9B9B;
+ $c-gray-medium         	: #F0F0F0;
+ $c-gray-medium-lighter 	: #E9E9E9;
+ $c-gray-light          	: #f9f9f9;
+ $c-gray-lightest       	: #f5f5f5;
+ $c-gray-lighter        	: #CCCCCC;
+ $c-gray-black          	: #555555;
+ $c-black               	: #4a4a4a;
+ $c-aqua                	: #50D3E3;
+ $c-dark-black          	: #424242;
+ $c-black-light         	: #1a1a1a;
+ $c-light-black         	: #9b9b9b;
+ $c-lighter-black       	: #5b5b5b;
+ $c-gray-dark           	: #4e688b;
+ $c-border              	: #ddd;
+ $gray-darker           : rgb(34, 30, 30);
+ $c-placeholder         	: #B7B7B7;
+ $c-light-orange  		: #fffbe9;
+ $c-orange 				: #F5A623;
+ $c-gold          		: #DAA520;
+ $rating-color			: #ffcc00;
+ $c-soft-gray			: #dfe8ee;
+
+ $h-40      : 40px;
+ $s-height  : 55px;
+ $width-135 : 135px;
+ $fs-base   : 14px;
+ $b-shadow  : 0 2px 2px 0 rgba(0,0,0,0.1);
+
+ $padding   : 20px;
+ $padding-m : $padding /2;
+ $margin    : 20px;
+ $margin-m  : $margin/2;
+
+ $font-size-xxsmall: 12px;
+ $font-size-small: 14px;
+ $font-size-medium: 16px;
+ $font-size-large: 18px;
+
+ $font-icon :'';
+ $font-size-base: 12px;
+
+
+
+
+
+
+
+
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

@@ -1,0 +1,19 @@
+<!-- Modal -->
+<% for (model of models) { %>
+<div class="modal fade epic in" id="<%= model.fullname.split(' ').join('') %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-model-container" style="background-image: url('<%= model.modelData.imagePopup || DOMAIN + '/images/placeholder-image.jpg' %>');">
+    <div class="flexible-container">
+        <div class="modal-model-description">
+          <h1><u><%= model.fullname.split(' ')[0] %></u> <%= model.fullname.split(' ')[1] %></h1>
+          <p><%= model.modelData.shortDesc %></p>
+          <p><%= model.modelData.longDesc %></p>
+          <p><%= model.modelData.misc %></p>
+        </div>
+        <div class="video-container">
+          <i class="fa fa-play-circle huge-icon" id="video<%= model.fullname.split(' ').join('') %>" style="color:white;" data-toggle="tooltip" data-placement="top" title="" data-original-title="Click to start video"></i>
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.modal-model-container -->
+</div>
+<% } %>
+<% include ./mustache-templates/model-video %>

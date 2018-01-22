@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row row-flex flex-sm">
+        <div class="col-md-6 mg-b-20">
+          <div class="models-ads-project">
+            <div class="row ads-project-outter">
+              <div class="col-sm-6">
+                <div class="ads-project-cover" style="background-image: url('<%= DOMAIN + '/images/sample-banner.webp' %>');">
+                  <img src="<%= DOMAIN + '/images/typetext-project.webp' %>" alt="" class="cover-mark img-responsive">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="ads-project-content">
+                  <h3>THE PROJECT</h3>
+                  <p class="lead">
+                    Meet the most exclusive team of cam models. Be part of their exclusive and private community. Each one of them is different and unique. Get to know them better, talk to them live or join their telegram channel.
+                  </p>
+
+                  <a href="#" class="btn btn-white" data-toggle="modal" data-target="#theProject">learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-flex flex-sm">
+        <div class="col-md-6 mg-b-20 text-white">
+          <div class="models-ads-telegram" style="background-image: url('<%= DOMAIN + '/images/bg-phone.webp' %>');">
+            <div class="telegram-outter">
+              <div class="text-left"><p>MOBILE COMMUNITY</p></div>
+              <h1>TELEGRAM GROUP</h1>
+
+              <div class="telegram-content">
+                <p class="lead">
+                  Join our private community and keep in touch with our models directly from your mobile phone. Share your ideas and thoughts with us.
+                </p>
+              </div>
+
+              <a href="#" class="btn btn-white">JOIN CHANNEL!</a>
+              <a href="#" class="btn btn-primary">JOIN PRIVATE GROUP!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mg-b-20 text-white">
+          <div class="models-ads-skype" style="background-image: url('http://19models.com/lp-new/assets/img/xskype-date-bk.jpg.pagespeed.ic.PMYx6NKBOz.webp');">
+            <div class="skype-outter">
+
+              <h1>BOOK A SKYPE DATE</h1>
+
+              <div class="skype-content">
+                <p class="lead">
+                  If we are not online, you can schedule a private meeting via Skype. Choose your preffered day and hour.
+                </p>
+
+                <p class="lead">
+                  Simple and discreet!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <% for (let model of models) { %>
+          <div class="col-md-6 col-xs-12 mg-b-20">
+            <div class="models-post-outter model-item">
+              <div class="models-cover">
+                <a href="">
+                  <img class="img-responsive" src="<%= model.modelData.imageCard || DOMAIN + '/images/placeholder-image.jpg' %>">
+                </a>
+                <div class="models-status">
+                  OFFLINE
+                </div>
+              </div>
+              <div class="flex-bar-title">
+                <div class="title-left">
+                  <h2>
+                    <u><%= model.fullname.split(' ')[0] %></u> <%= model.fullname.split(' ')[1] %>
+                  <span class="left-meta">
+                    <span class="meta-social">
+                      <i class="fa fa-skype"></i>
+                      <i class="fa fa-telegram"></i>
+                    </span>
+                  </span>
+                  </h2>
+                  <h3><%= model.shortDesc %></h3>
+                </div>
+                <div class="title-right">
+                  <button type="button" class="btn btn-white btn-lg" data-toggle="modal" data-target="#<%= model.fullname.split(' ').join('') %>">
+                    About Me
+                  </button>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%= model.fullname.split(' ').join('') %>">
+                    Skype Date
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <% include ../partials/modals-banner%>
+    <% include ../partials/modals-models %>
+  </main>
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+  <% include ../partials/scripts%>
+</body>
+</html>

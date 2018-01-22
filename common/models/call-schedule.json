@@ -1,0 +1,61 @@
+{
+  "name": "CallSchedule",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "modelGirlId": {
+      "type": "number",
+      "required": true
+    },
+    "guestUserId": {
+      "type": "number",
+      "required": true
+    },
+    "scheduleDate": {
+      "type": "date",
+      "required": true
+    },
+    "minutes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "WAITING_PAYMENT"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "modelGirl": {
+      "type": "belongsTo",
+      "model": "ModelGirl",
+      "foreignKey": "modelGirlId"
+    },
+    "guestUser": {
+      "type": "belongsTo",
+      "model": "GuestUser",
+      "foreignKey": "guestUserId"
+    }
+  },
+  "acls": [],
+  "methods": {
+    "createCall": {
+      "accepts": [
+        { "arg": "data", "type": "object", "http": { "source": "body" } },
+        { "arg": "req", "type": "object", "http": { "source": "req" } }
+      ],
+      "returns": { "arg": "data", "type": "object", "root": true },
+      "http": { "path": "/createSchedule", "verb": "post" }
+    }
+  }
+}

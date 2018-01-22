@@ -1,0 +1,394 @@
+@import './helpers.scss';
+@import './variables.scss';
+
+body {
+  font-family:"Roboto","Helvetica","Arial",sans-serif;
+  padding-top: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin gradient-horizontal($color1, $color2) {
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin btn-variant($bg-color, $font-color) {
+  background: $bg-color;
+  color: $font-color;
+  border-color: $bg-color;
+
+  &:hover,
+  &:focus {
+    background: $bg-color;
+    color: $font-color;
+    border-color: $bg-color;
+  }
+}
+
+.navbar-default {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  box-shadow: 0 0 10px 0;
+  transition: 0.5s all ease;
+
+  .navbar-nav {
+    li {
+      a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        color: #fff;
+
+      }
+
+      &:hover,
+      &:focus {
+        a {
+          color: #fff;
+          background: none;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+}
+
+
+#sticky-navbar-models {
+  transition: top 0.2s ease-in-out;
+}
+
+.nav-up {
+  top: -70px;
+}
+
+.navbar-brand {
+  img {
+    width: 140px;
+    margin-top: -5px;
+
+    @media(min-width: $screen-tablet) {
+      width: auto;
+    }
+  }
+}
+
+.models-post-outter {
+  background: $brand-secondary;
+  border-radius: 5px;
+
+  .models-cover {
+    position: relative;
+  }
+
+  .models-status {
+    position: absolute;
+    width: 100%;
+    bottom: 0px; left: 0px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    background: rgba(#000, .35);
+  }
+}
+
+.row-flex {
+  &.flex-sm {
+    display: block;
+
+    > div {
+      display: block;
+      width: 100%;
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+
+      > div {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.btn-white {
+  @include btn-variant(#fff, #000);
+}
+
+.btn-primary {
+  @include btn-variant($brand-primary, #fff);
+}
+
+.models-ads-project {
+  background: $brand-secondary;
+  color: #fff;
+
+  .ads-project-outter {
+    display: flex;
+    align-items: center;
+
+    .ads-project-cover {
+      height: $block-height;
+      background-size: cover !important;
+      position: relative;
+
+      .cover-mark {
+        width: 75%;
+        position: absolute;
+        bottom: 20px; right: 20px;
+      }
+    }
+
+    .ads-project-content {
+      padding-right: 15px;
+    }
+  }
+}
+
+.models-ads-telegram {
+  width: 100%;
+  position: relative;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $brand-secondary;
+  height: $block-height; padding: 20px;
+  width: 100%;
+
+  @media (min-width: $screen-sm) {
+    padding: 40px;
+  }
+
+  .telegram-outter {
+    position: absolute;
+    width: 100%;
+    bottom: 30%;
+    left: 0px;
+    padding: 40px;
+
+    .telegram-content {
+      bottom: 40px;
+      width: 100%;
+
+      @media (min-width: $screen-tablet) {
+        width: 60%;
+      }
+
+      @media (min-width: $screen-desktop) {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.models-ads-skype {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: $block-height;
+
+  @media(min-width: $screen-tablet) {
+    height: auto;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    @include gradient-horizontal(transparent, rgba($brand-primary, .75));
+  }
+
+  .skype-outter {
+    position: absolute;
+    left: 0; bottom: 40%;
+    width: 100%;
+    padding: 10px;
+
+    @media (min-width: $screen-tablet) {
+      padding: 40px;
+    }
+  }
+}
+
+.flex-bar-title {
+  width: 100%;
+  padding: 10px;
+  display: block;
+
+  @media(min-width: $screen-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .title-left {
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1em;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+    .title-left-name {
+      &:before {
+        content: '';
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  .title-right {
+    width: 100%;
+
+    .btn {
+      width: 49%;
+    }
+
+    @media(min-width: $screen-tablet) {
+      width: 430px;
+
+      .btn {
+        width: auto;
+      }
+    }
+  }
+}
+
+.model-item {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.modal-model-container {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 5% auto;
+  width: 75%;
+  padding: 3%;
+  height: 75%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  h1 {
+    font-size: 40px;
+    color: white;
+  }
+  p {
+    color: white;
+  }
+
+  .video-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .flexible-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .modal-model-description {
+    width: 30%;
+  }
+
+  .fa {
+    &.huge-icon.fa-play-circle {
+      font-size: 120px;
+    }
+  }
+}
+
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media(min-width: $screen-tablet) {
+    margin-top: 100px;
+  }
+
+  .prefooter {
+    .prefooter-logo {
+      img {
+        width: 200px;
+        margin: 0px auto;
+
+        @media(min-width: $screen-tablet) {
+          width: 250px;
+        }
+      }
+    }
+
+    .prefooter-navigation,
+    .prefooter-navigation-important {
+      ul {
+        margin-bottom: 0px;
+        padding-left: 0px;
+        text-align: center;
+
+          li {
+          padding: 0px;
+          display: inline-block;
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          a {
+            color: #000;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .prefooter-navigation {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .prefooter-navigation-important {
+        ul {
+          li {
+            a {
+              font-size: 12px;
+              color: rgba(#000, .75);
+            }
+          }
+        }
+      }
+    }
+  }
+}

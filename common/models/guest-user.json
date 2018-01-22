@@ -1,0 +1,36 @@
+{
+  "name": "GuestUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "skypeUser": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transactionGuests": {
+      "type": "hasMany",
+      "model": "TransactionGuest",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

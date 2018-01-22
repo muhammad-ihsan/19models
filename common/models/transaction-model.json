@@ -1,0 +1,46 @@
+{
+  "name": "TransactionModel",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "modelGirlId": {
+      "type": "number",
+      "required": true
+    },
+    "callScheduleId": {
+      "type": "number",
+      "required": true
+    },
+    "transactionTime": {
+      "type": "date",
+      "required": true
+    },
+    "transactionType": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "NOT_PAID"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "modelGirl": {
+      "type": "belongsTo",
+      "model": "ModelGirl",
+      "foreignKey": "modelGirlId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

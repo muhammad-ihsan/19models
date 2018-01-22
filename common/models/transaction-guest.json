@@ -1,0 +1,47 @@
+{
+  "name": "TransactionGuest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "guestUserId": {
+      "type": "number",
+      "required": true
+    },
+    "callScheduleId": {
+      "type": "number",
+      "required": true
+    },
+    "transactionTime": {
+      "type": "date",
+      "required": true
+    },
+    "transactionShortNumber": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "default": 10
+    },
+    "status": {
+      "type": "string",
+      "default": "WAITING_PAYMENT"
+    },
+    "transactionInformation": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guestUser": {
+      "type": "belongsTo",
+      "model": "GuestUser",
+      "foreignKey": "guestUserId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

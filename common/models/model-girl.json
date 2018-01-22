@@ -1,0 +1,57 @@
+{
+  "name": "ModelGirl",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "modelData": {
+      "type": "object"
+    },
+    "fullname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "availableTime": {
+      "type": "object",
+      "required": true
+    },
+    "skypeUser": {
+      "type": "string",
+      "required": true
+    },
+    "rate": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "rateSession": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transactionModels": {
+      "type": "hasMany",
+      "model": "TransactionModel",
+      "foreignKey": ""
+    },
+    "callSchedules": {
+      "type": "hasMany",
+      "model": "CallSchedule",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
