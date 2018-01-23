@@ -14,6 +14,7 @@ const plugins = [
   './node_modules/jquery/dist/jquery.js',
   './node_modules/bootstrap3/dist/js/bootstrap.js',
   './node_modules/mustache/mustache.js',
+  'views/scripts/material-kit.js',
 ]
 
 const stylePlugins = [
@@ -27,8 +28,6 @@ const appScripts = [
 ]
 
 const styles = [
-  'views/sass/utilities/variables.scss',
-  'views/sass/utilities/utilities.scss',
   'views/sass/*.scss'
 ]
 
