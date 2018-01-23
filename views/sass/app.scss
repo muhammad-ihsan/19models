@@ -1,100 +1,11 @@
-@import './helpers.scss';
-@import './variables.scss';
-@import './material-kit.css';
-@import './components/modal.scss';
-@import './components/cards.scss';
+@import '_all.scss';
 
 body {
   font-family:"Roboto","Helvetica","Arial",sans-serif;
   padding-top: 20px;
 }
-
-.btn {
-  padding: 12px 30px;
-  border-radius: 3px;
-  font-size: 12px;
-  text-transform: uppercase
-}
-
-@mixin flex {
-  display: flex;
-}
-
-@mixin gradient-horizontal($color1, $color2) {
-  background: linear-gradient($color1, $color2);
-}
-
-@mixin btn-variant($bg-color, $font-color) {
-  background: $bg-color;
-  color: $font-color;
-  border-color: $bg-color;
-
-  &:hover,
-  &:focus {
-    background: $bg-color;
-    color: $font-color;
-    border-color: $bg-color;
-  }
-}
-
-.navbar-default {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
-  box-shadow: 0 0 10px 0;
-  transition: 0.5s all ease;
-
-  .navbar-nav {
-    li {
-      a {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        text-transform: uppercase;
-        color: #fff;
-
-      }
-
-      &:hover,
-      &:focus {
-        a {
-          color: #fff;
-          background: none;
-        }
-      }
-    }
-  }
-
-  .navbar-toggle {
-    border-color: transparent;
-
-    &:hover,
-    &:focus {
-      background: none;
-    }
-
-    .icon-bar {
-      background-color: #fff;
-    }
-  }
-}
-
-
-#sticky-navbar-models {
-  transition: top 0.2s ease-in-out;
-}
-
 .nav-up {
   top: -70px;
-}
-
-.navbar-brand {
-  img {
-    width: 140px;
-    margin-top: -5px;
-
-    @media(min-width: $screen-tablet) {
-      width: auto;
-    }
-  }
 }
 
 .models-post-outter {
@@ -116,34 +27,6 @@ body {
     letter-spacing: 0.12em;
     background: rgba(#000, .35);
   }
-}
-
-.row-flex {
-  &.flex-sm {
-    display: block;
-
-    > div {
-      display: block;
-      width: 100%;
-    }
-
-    @media (min-width: $screen-sm) {
-      display: flex;
-
-      > div {
-        display: flex;
-        width: 100%;
-      }
-    }
-  }
-}
-
-.btn-white {
-  @include btn-variant(#fff, #000);
-}
-
-.btn-primary {
-  @include btn-variant($brand-primary, #fff);
 }
 
 .models-ads-project {
@@ -238,101 +121,9 @@ body {
   }
 }
 
-.flex-bar-title {
-  width: 100%;
-  padding: 10px;
-  display: block;
-
-  @media(min-width: $screen-tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .title-left {
-    width: 100%;
-    color: #fff;
-    font-weight: 800;
-    font-size: 2em;
-    line-height: 1em;
-    text-shadow: 0 3px 6px rgba(0,0,0,.16);
-
-    .title-left-name {
-      &:before {
-        content: '';
-        position: relative;
-        top: 5px;
-      }
-    }
-  }
-
-  .title-right {
-    width: 100%;
-
-    .btn {
-      width: 49%;
-    }
-
-    @media(min-width: $screen-tablet) {
-      width: 430px;
-
-      .btn {
-        width: auto;
-      }
-    }
-  }
-}
-
 .model-item {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
-.modal-model-container {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  margin: 5% auto;
-  width: 75%;
-  padding: 3%;
-  height: 75%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  h1 {
-    font-size: 40px;
-    color: white;
-  }
-  p {
-    color: white;
-  }
-
-  .video-container {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .flexible-container {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .modal-model-description {
-    width: 30%;
-  }
-
-  .fa {
-    &.huge-icon.fa-play-circle {
-      font-size: 120px;
-    }
-  }
-}
-
 
 footer {
   margin-top: 20px;
@@ -373,6 +164,11 @@ footer {
           a {
             color: #000;
             text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+              text-decoration: none;
+            }
           }
         }
       }
@@ -393,21 +189,23 @@ footer {
         }
       }
     }
+
+    .prefooter-navigation {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .prefooter-navigation-important {
+      ul {
+        li {
+          a {
+            font-size: 10px;
+          }
+        }
+      }
+    }
   }
 }
-
-
-// .modal-preview-idea {
-//   position: relative;
-
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     width: 100%; height: 100%;
-//     top: 0; left: 0;
-//     @include gradient-horizontal(transparent, rgba($brand-primary, .75));
-//   }
-// }
 
 .modal-model-container {
   background-color: #333;

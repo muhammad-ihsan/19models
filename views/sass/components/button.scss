@@ -1,0 +1,28 @@
+@mixin btn-variant($bg-color, $font-color) {
+  background: $bg-color;
+  color: $font-color;
+  border-color: $bg-color;
+
+  &:hover,
+  &:focus {
+    background: $bg-color;
+    color: $font-color;
+    border-color: $bg-color;
+  }
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase
+}
+
+
+.btn-white {
+  @include btn-variant(#fff, #000);
+}
+
+.btn-primary {
+  @include btn-variant($brand-primary, #fff);
+}

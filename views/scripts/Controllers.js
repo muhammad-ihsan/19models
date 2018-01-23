@@ -15,6 +15,8 @@ Handler.Controllers = (function (videoList) {
   }
 
   const init = () => {
+    $.material.init();
+
     $(document).on('scroll', function() {
         if (window.scrollY > 160) {
             $(".navbar-default").removeClass("hidden");
@@ -25,24 +27,6 @@ Handler.Controllers = (function (videoList) {
         }
     });
 
-    // $("#sticky-navbar-models").headroom({
-    //   classes : {
-    //     // when element is initialised
-    //     initial : "hidden",
-    //     // when scrolling up
-    //     pinned : "hidden",
-    //     // when scrolling down
-    //     unpinned : "headroom--unpinned",
-    //     // when above offset
-    //     top : "nav-up",
-    //     // when below offset
-    //     notTop : "nav-up",
-    //     // when at bottom of scoll area
-    //     bottom : "nav-bottom",
-    //     // when not at bottom of scroll area
-    //     notBottom : "headroom--not-bottom"
-    //   }
-    // })
     playVideoAsModel()
   }
   return {

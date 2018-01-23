@@ -1,0 +1,69 @@
+@mixin flex {
+  display: flex;
+}
+
+.row-flex {
+  &.flex-sm {
+    display: block;
+
+    > div {
+      display: block;
+      width: 100%;
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+
+      > div {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.flex-bar-title {
+  width: 100%;
+  padding: 10px;
+  display: block;
+
+  @media(min-width: $screen-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .title-left {
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1em;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+    .title-left-name {
+      &:before {
+        content: '';
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  .title-right {
+    width: 100%;
+
+    .btn {
+      width: 49%;
+    }
+
+    @media(min-width: $screen-tablet) {
+      width: 430px;
+
+      .btn {
+        width: auto;
+      }
+    }
+  }
+}
