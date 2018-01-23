@@ -17,6 +17,11 @@ Handler.Controllers = (function (videoList) {
   const init = () => {
     $.material.init();
 
+    $('[datepicker]').datepicker({
+      autoclose: true,
+      minDate: moment()
+    })
+
     $(document).on('scroll', function() {
         if (window.scrollY > 160) {
             $(".navbar-default").removeClass("hidden");
