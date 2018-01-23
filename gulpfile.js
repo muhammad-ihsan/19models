@@ -14,6 +14,8 @@ const plugins = [
   './node_modules/jquery/dist/jquery.js',
   './node_modules/bootstrap3/dist/js/bootstrap.js',
   './node_modules/mustache/mustache.js',
+  './node_modules/bootstrap-datepicker/js/bootstrap-datepicker.js',
+  './node_modules/moment/src/moment.js',
   'views/scripts/material-kit.js',
 ]
 
