@@ -1,0 +1,134 @@
+/* Epic Model Modal - catchy isn't it? */
+.modal-backdrop {
+    background-color: rgba(255,255,255,0.99);
+  }
+
+.modallogo {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.inner-modal {
+    margin-top:10%;
+    position: inherit;
+    display: block;
+    z-index:3;
+    margin-left: 5em;
+    color: #fff;
+    height: 100%;
+    width:90%;
+}
+
+.inner-modalright {
+    margin-top:10%;
+    position: inherit;
+    display: block;
+    z-index:3;
+    margin-right: 2em;
+    margin-left: 2em;
+    color: #fff;
+    height: 100%;
+}
+
+.epic h3 {
+    color:#fff;
+    font-size: 40px;
+    font-weight:800;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+
+.epic p {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.modalgrad:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background: -moz-linear-gradient(left, rgba(96,165,214,1) 0%, rgba(111,175,223,0) 50%, rgba(125,185,232,0) 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(96,165,214,1) 0%,rgba(111,175,223,0) 50%,rgba(125,185,232,0) 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(96,165,214,1) 0%,rgba(111,175,223,0) 50%,rgba(125,185,232,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a5d6', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+
+}
+
+.bluefilter:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(136, 201, 246, 0.7);
+
+}
+
+.telegrammodalcontent {
+    position: relative;
+    z-index: 3;
+    padding: 30px;
+}
+
+.telegrammodalcontent h4 {
+    color: #fff;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.learnmore {
+    position: relative;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(70%);
+}
+.learnmore h4 {
+    color: #fff;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.signup {
+    position: relative;
+    z-index:3;
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.signupform {
+    position: relative;
+    z-index:3;
+    padding: 50px;
+}
+.signup h5 {
+    color: #fff;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-weight: 800;
+    font-size: 1.5em;
+}
+.signup h4 {
+    color: #fff;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.signup h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 3.5em;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.signupform h1 {
+    font-weight: 800;
+}
+
+.datepicker.dropdown-menu.open {
+    z-index: 2222;
+}

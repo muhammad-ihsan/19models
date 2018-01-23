@@ -1,5 +1,8 @@
 @import './helpers.scss';
 @import './variables.scss';
+@import './material-kit.css';
+@import './components/modal.scss';
+@import './components/cards.scss';
 
 body {
   font-family:"Roboto","Helvetica","Arial",sans-serif;
@@ -391,4 +394,21 @@ footer {
       }
     }
   }
+}
+
+
+// .modal-preview-idea {
+//   position: relative;
+
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     width: 100%; height: 100%;
+//     top: 0; left: 0;
+//     @include gradient-horizontal(transparent, rgba($brand-primary, .75));
+//   }
+// }
+
+.modal-model-container {
+  background-color: #333;
 }
